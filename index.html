@@ -9,31 +9,54 @@
     rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
     crossorigin="anonymous">
 <link href="src/style.css" rel="stylesheet" type="text/css"/>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 
     <title>Vanilla-Weather</title>
 </head>
 <body>
-    <h1>WEATHER</h1>
+    <div class="container">
+        <h1>WEATHER</h1>
+        <img src="image/4829032.png"class="image" width="100" height="100"/>
+        <form id="city-form">
+          <input type="city" id="inputCity" placeholder="🔍 Type a city..."/>
+          <input type="submit" value="Search"/>
+        </form>
+        <br/>
+         <br />
+         <span id="cityType">   </span>
 
+         <span id="timeType">     </span>
+         
+        <div class="weatherForecast">
+            <div class="row">
+                <div class="col-2">
+                    Monday
+                </div>
+                <div class="col-2">
+                    Tuesday
+                </div>
+                <div class="col-2">
+                    Wednesday
+                </div>
+                <div class="col-2">
+                    Thursday
+                </div>
+                <div class="col-2">
+                    Friday
+                </div>
+                <div class="col-2">
+                    Saturday
+                </div>
+            </div>
+        </div>
+    
+    <footer>
+        This project was coded by Hanna Ivakhnenko,you can <a href="https://github.com/HANNA-5/weather_city.git" target="_blank">open code on GitHub,</a>
+        and 
+        <a href=" "target="_blank">hosted on Netlify</a>.
+    </footer>
+</div>
 <script src="src/index.js"></script>
 </body>
-<div class="container">
-    <div class="row">
-      <div class="col-2">Monday</div>
-      <div class="col-2">Tuesday</div>
-      <div class="col-2">Wednesday</div>
-      <div class="col-2">Thursday</div>
-      <div class="col-2">Friday</div>
-      <div class="col-2">Saturday</div>
-      
-      </div>
-    
-  </div>
-
-
-
-<div>
-   This project was coded by Hanna Ivakhnenko,you can <a href="https://github.com/HANNA-5/weather_city.git" target="_blank">open code on GitHub,</a>and
-   <a href=" "target="_blank">hosted on Netlify</a>.
-</div>
 </html>
