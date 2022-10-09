@@ -81,7 +81,9 @@ footer{
     padding: 5px 15px 5px 15px ;
 
 }
-
+strong{
+    color: rgb(129, 86, 169);
+}
  
 /* ul{ */
     /* margin:0; */ */
