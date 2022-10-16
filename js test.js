@@ -95,3 +95,18 @@ export default function Weather(props) {
       return "Loading...";
     }
   }
+
+  const DAY_MILSEC = 24 * 60 * 60 * 1000;
+
+let today = new Date().getTime();
+for (let i = 0; i < 7; i++) {
+  let date = new Date(today + DAY_MILSEC * i);
+  card[i].textContent = getDay(date)
+  console.log(getDay(date));
+}
+let card = document.querySelectorAll(".card-day"); //а внутри цикла, вместо console.log - card[i].textContent = getDay(date)
+
+function getDay(date) {
+  let days = ["Вскр", "Пон", "Втр", "Сред", "Чтв", "Пят", "Суб"];
+  return date.getDate() + " " + days[date.getDay()];
+}
