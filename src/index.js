@@ -11,14 +11,16 @@ let Day = [
 ];
 
 
-function formatDay(){
+function formatDayTime(){
     let DayNow= now.getDay();
     let hoursNow= now.getHours();
+    if (hoursNow<10){hoursNow=`0${hoursNow}`;}
     let minutesNow= now.getMinutes();
+    if(minutesNow<10){minutesNow=`0${minutesNow}`;}
     document.querySelector("#timeType").innerHTML=
     Day[DayNow]+" "+" "+hoursNow+" "+":"+" "+minutesNow; 
 }
-formatDay();
+formatDayTime();
 
 function weather(response){
   //2 вар-т  //  document.querySelector("#humidityNow").innerHTML=`${response.data.main.humidity} %`;
