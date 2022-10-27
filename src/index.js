@@ -9,7 +9,7 @@ let Day = [
   "Saturday",
   "Sanday",
 ];
-let apiKey = "bc2cd97eaa209e7d22d8f3c84081655f";
+let apiKey = "743bee57fddbfaf52447193a87d5dd25";
 
 function formatDayTime() {
   let DayNow = now.getDay();
@@ -64,8 +64,9 @@ function displayForecast(response) {
 // let apiKey = "bc2cd97eaa209e7d22d8f3c84081655f";
   let lat = response.data.coord.lat;
   let lng = response.data.coord.lon;
-  let url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lng}&cnt=6&appid=${apiKey}`;
-  axios.get(url).then(daily);
+// let urlD = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lng}&exclude=hourly&appid=${apiKey}`;
+  let urlD = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lng}&cnt=6&appid=04a475b0f872e4cd97ff8f5f04b9fbeb`;
+  axios.get(urlD).then(daily);
 }
 
 function daily(response) {
